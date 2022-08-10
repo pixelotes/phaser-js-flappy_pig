@@ -1,0 +1,9 @@
+http://localhost/flappy/puntuacion.php?nom=Raul&pun=1&sav=N
+
+Parámetros (obligatorios):
+nom -> Nombre del jugador (String)
+pun -> Puntuación (int)
+sav -> Guardar en BBDD (boolean)
+
+Salida
+6 de 294

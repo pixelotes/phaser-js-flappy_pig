@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Flappy Bird Clone</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery.min.js"></script>
+        <script src="notify.min.js"></script>
+        <script src="src/phaser.min.js"></script>
+        <script src="src/Boot.js"></script>
+        <script src="src/Preloader.js"></script>
+        <script src="src/MainMenu.js"></script>
+        <script src="src/Game.js"></script>
+    </head>
+    <body>
+        <div id="gameDiv"></div>
+        <script>
+            (function(){
+                var game = new Phaser.Game(288, 505, Phaser.AUTO, 'game');
+                game.state.add('Boot', Flappy.Boot);
+                game.state.add('Preloader', Flappy.Preloader);
+                game.state.add('MainMenu', Flappy.MainMenu);
+                game.state.add('Game', Flappy.Game);
+                game.state.start('Boot');
+            })();
+        </script>
+    </body>
+</html>
